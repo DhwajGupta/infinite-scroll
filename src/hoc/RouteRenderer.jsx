@@ -6,7 +6,7 @@ const RouteRenderer = (props) => {
 
   const loggedIn = sessionStorage.getItem('loggedIn')
 
-  if (isPrivateRoute && loggedIn) {
+  if (isPrivateRoute && !loggedIn) {
     return <Redirect to='/' />
   }
 
